@@ -1,0 +1,117 @@
+/* style.css */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f1721;
+  color: #e6eef8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-height: 100vh;
+  padding: 18px;
+}
+
+header h1 { margin: 0; font-size: 20px; }
+header p { margin: 6px 0 12px 0; color: #cfe8ff; }
+
+#frame {
+  position: relative;
+  width: 640px;
+  height: 480px;
+  max-width: 100%;
+}
+
+/* Stack video and canvas exactly; canvas on top */
+video, canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 640px;
+  height: 480px;
+  border-radius: 10px;
+  background: black;
+  object-fit: cover;
+}
+
+canvas {
+  z-index: 2;
+  pointer-events: none;
+}
+
+#status {
+  margin-top: 8px;
+  background: rgba(255,255,255,0.04);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #cfe8ff;
+}
+#transcriptBox {
+  width: 640px;
+  max-width: 90%;
+  height: 150px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.07);
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 12px;
+  font-family: monospace;
+  font-size: 15px;
+  color: #aefcae;
+  box-shadow: 0 0 6px rgba(255,255,255,0.2);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0f1721;
+  color: #fff;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+#videoContainer {
+  position: relative;
+  width: 480px;
+  height: 360px;
+  margin-top: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(92, 8, 8, 0.15);
+}
+
+#inputVideo, #outputCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+#status {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #8ef08e;
+}
+
+#transcriptBox {
+  width: 480px;
+  height: 160px;
+  overflow-y: auto;
+  background: rgba(255,255,255,0.07);
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  font-family: monospace;
+  font-size: 14px;
+  color: #aefcae;
+  box-shadow: 0 0 6px rgba(255,255,255,0.2);
+}
+
+
+
